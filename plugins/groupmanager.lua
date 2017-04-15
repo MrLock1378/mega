@@ -73,9 +73,9 @@ local lang = redis:get(hash)
     -- superuser and admins only (because sudo are always has privilege)
       if not is_admin(msg) then
      if not lang then
-        return '_#شما مدیر ربات reborn نمیباشید!🍃_'
+        return '_#شما مدیر ربات 🛡SPIDER🛡 نمیباشید!🍃_'
    else
-        return '#شما مدیر ربات reborn نمیباشید!🍃'
+        return '#شما مدیر ربات 🛡SPIDER🛡 نمیباشید!🍃'
     end
    end
     local data = load_data(_config.moderation.data)
@@ -97,9 +97,9 @@ else
       end data[tostring(groups)][tostring(msg.to.id)] = nil
       save_data(_config.moderation.data, data)
  if not lang then
-  return '*#گروه دیگر توسط reborn ساپورت نمیشود!🍃*'
+  return '*#گروه دیگر توسط 🛡SPIDER🛡 ساپورت نمیشود!🍃*'
  else
-  return '#گروه دیگر توسط reborn ساپورت نمیشود!🍃'
+  return '#گروه دیگر توسط 🛡SPIDER🛡 ساپورت نمیشود!🍃'
 end
 end
 
@@ -3053,14 +3053,14 @@ local lang = redis:get(hash)
 return "_Group Language Set To:_ EN"
   elseif matches[2] == "fa" then
 redis:set(hash, true)
-return "*زبان گروه تنظیم شد به : فارسی*"
+return "*زبان ربات 🛡SPIDER🛡 تنظیم شد به : فارسی*"
 end
 end
 
 if matches[1] == "help" and is_mod(msg) then
 if not lang then
 text = [[
-*Beyond Bot Commands:*
+*🛡SPIDER🛡 Bot Commands:*
 *!setowner* `[username|id|reply]` 
 _Set Group Owner(Multi Owner)_
 *!remowner* `[username|id|reply]` 
@@ -3166,7 +3166,7 @@ text = [[
 تنظیمات لیست موت
 /mutelist
 —----------------
-دستورات ربات ریبورن :
+دستورات ربات اسپایدر :
 
 !setowner [username|id|reply] 
 انتخاب مالک گروه(قابل انتخاب چند مالک)
@@ -3322,7 +3322,7 @@ text = [[
 —----------------
 ⚠️شما میتوانید از ! و # و / در اول دستور ها استفاده کنید
 ⚠️هرگونه سوال و انتقاد یا پیشنهادخود را میتوانید در گروه پشتیبانی مطرح کنید
-@telereborn]]
+🛡SPIDER🛡]]
 end
 return text
 end
