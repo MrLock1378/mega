@@ -999,6 +999,15 @@ return '_Group Has Been Created!_'
 return '_گروه ساخته شد!_'
    end
 end
+if matches[1] == 'channel' and is_admin(msg) then
+local text = matches[2]
+tdcli.createNewGroupChat({[0] = msg.from.id}, text, dl_cb, nil)
+  if not lang then
+return '_🛡 @LockerTeam 🛡  join please :) _'
+  else
+return '_🛡 @LockerTeam در کانال ما جوین شید لطفا : تا از آخرین اخبار ربات باخبر شوید : 🛡_'
+   end
+end
 
 if matches[1] == 'createsuper' and is_admin(msg) then
 local text = matches[2]
@@ -1093,12 +1102,12 @@ matches[3] then
 		local send_file = 
 "./"..matches[2].."/"..matches[3]
 		tdcli.sendDocument(msg.chat_id_, msg.id_,0, 
-1, nil, send_file, '@telereborn', dl_cb, nil)
+1, nil, send_file, '@LockerTeam', dl_cb, nil)
 	end
 	if matches[1]:lower() == "sendplug" and matches[2] then
 	    local plug = "./plugins/"..matches[2]..".lua"
 		tdcli.sendDocument(msg.chat_id_, msg.id_,0, 
-1, nil, plug, '@telereborn', dl_cb, nil)
+1, nil, plug, '@LockerTeam', dl_cb, nil)
     end
   end
 
@@ -1289,6 +1298,8 @@ _Invite You To Specific Group_
 
 *!leave* `[GroupID]`
 _Leave Bot From Specific Group_
+*!channel*
+_🛡 @LockerTeam 🛡_
 
 _You can use_ *[!/#]* _at the beginning of commands._
 
@@ -1428,6 +1439,7 @@ patterns = {
 "^[!/#](leave)$",
 "^[!/#](autoleave) (.*)$", 
 "^[!/#](beyond)$",
+"^[!/#]([Cc]hannel)$",
 "^[!/#](creategroup) (.*)$",
 "^[!/#](createsuper) (.*)$",
 "^[!/#](tosuper)$",
