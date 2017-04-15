@@ -1,6 +1,6 @@
 --start by @Tele_Sudo
 local datebase = {
-   "PONG...",
+   "💥PONG💥... 🛡 SPIDER Online :) 🛡 ",
   }
 local function run(msg, matches) 
 return datebase[math.random(#datebase)]
