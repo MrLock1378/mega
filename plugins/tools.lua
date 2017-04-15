@@ -999,16 +999,7 @@ return '_Group Has Been Created!_'
 return '_گروه ساخته شد!_'
    end
 end
-if matches[1] == 'channel' and is_admin(msg) then
-local text = matches[2]
-tdcli.createNewGroupChat({[0] = msg.from.id}, text, dl_cb, nil)
-  if not lang then
-return '_🛡 @LockerTeam 🛡  join please :) _'
-  else
-return '_🛡 @LockerTeam در کانال ما جوین شید لطفا : تا از آخرین اخبار ربات باخبر شوید : 🛡_'
-   end
-end
-
+	
 if matches[1] == 'createsuper' and is_admin(msg) then
 local text = matches[2]
 tdcli.createNewChannelChat(text, 1, '', dl_cb, nil)
@@ -1439,7 +1430,6 @@ patterns = {
 "^[!/#](leave)$",
 "^[!/#](autoleave) (.*)$", 
 "^[!/#](beyond)$",
-"^[!/#]([Cc]hannel)$",
 "^[!/#](creategroup) (.*)$",
 "^[!/#](createsuper) (.*)$",
 "^[!/#](tosuper)$",
