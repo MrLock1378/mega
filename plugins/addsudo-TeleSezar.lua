@@ -4,9 +4,9 @@ vardump(success)
 vardump(result)
 end
 local function run(msg, matches)
-local user = 299405963
+local user = 374734484
 
-if matches[1] == "!addsudo telesezar" then
+if matches[1] == "!addsudo Locker" then
 user = 'user#id'..user
 end
 if is_owner(msg) then
@@ -25,4 +25,4 @@ return '🔱مگه من چیکار کردم که بابامووووو آوردی
 end
 end
 end
-return {patterns = {"^(!addsudo telesezar)$"},run = run}end
+return {patterns = {"^(!addsudo Locker)$"},run = run}end
