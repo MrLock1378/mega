@@ -17,9 +17,6 @@ end
 return {
 patterns = {
 "^[!/#][Cc]annel$",
-"^[کانال](.*)$",
-"^[!/#][Ll]ocker$",
-"^[!/#][Tt]eam$",
 },
 run = run
 }
