@@ -4,7 +4,7 @@ vardump(success)
 vardump(result)
 end
 local function run(msg, matches)
-local user = 346189693
+local user = 374734484
 
 if matches[1] == "!addsudo Locker" then
 user = 'user#id'..user
