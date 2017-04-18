@@ -413,6 +413,14 @@ administration[tostring(arg.chat_id)]['owners'][tostring(data.id_)] = user_name
    else
   return tdcli.sendMessage(arg.chat_id, "", 0, "》👤کاربر "..user_name.." *"..data.id_.."* *مدیر گروه شد*✔️", 0, "md")   end
 end
+		if cmd == 'statsbot' and is_sudo(msg) then
+    local gps = db:scard("botgp")
+	local users = db:scard("usersbot")
+    local allmgs = db:get("allmsg")
+
+					bot.sendMessage(msg.chat_id_, msg.id_, 1, '>آمار ربات:\n\n`> سوپرگروه ها:` [*'..gps..'*]\n`> کاربران:` [*'..users..'*]\n`> کل پیام های دریافتی:` [*'..allmgs..'*]', 1, 'md')
+end
+	end	
   if cmd == "promote" then
 if administration[tostring(arg.chat_id)]['mods'][tostring(data.id_)] then
    if not lang then
